@@ -15,7 +15,7 @@ class CouchConsole
     all = @db.documents
     puts "#{all["total_rows"]} documents :"
     all["rows"].each do |doc|
-      puts "  #{doc["id"]}"
+      puts "  id : #{doc["id"]} - rev : #{doc["value"]["rev"]}"
     end
   end
 end

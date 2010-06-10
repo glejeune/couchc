@@ -26,10 +26,13 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "bin/couchc",
+     "couchc.gemspec",
      "lib/commands/all_documents.rb",
      "lib/commands/delete.rb",
+     "lib/commands/new_doc.rb",
      "lib/commands/show.rb",
      "lib/commands/update.rb",
+     "lib/commands/uri.rb",
      "lib/couchconsole.rb",
      "test/helper.rb",
      "test/test_couchc.rb"

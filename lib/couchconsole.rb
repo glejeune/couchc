@@ -29,7 +29,7 @@ class CouchConsole
   def help
     @commands.each do |command|
       command[:documentation].each do |cmd|
-        printf "%-20s : %s\n", cmd[0], cmd[1]
+        printf "%-30s : %s\n", cmd[0], cmd[1]
       end
     end
   end
@@ -56,14 +56,20 @@ class CouchConsole
     base = ARGV[0] || getDatabase
     
     @db = CouchRest.database!( base )
+    begin
+      @db.info
+    rescue Errno::ECONNREFUSED
+      puts "!!! Can acces database #{@db}"
+      return
+    end
 
     prompt = ">> "
     while( true )
       cmd = Readline.readline(prompt, true)
-      break if cmd.chomp == "quit"
+      break if cmd.nil? or cmd.chomp == "quit"
       execute( cmd )
     end
-    puts "Bye! Bye !"
+    puts "\nBye! Bye !\n"
   end
   
   def self.go

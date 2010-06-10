@@ -4,7 +4,7 @@ class CouchConsole
     @commands << {
       :regexp => /^\s*update\s*([^\s]*)\s*([^\s=]*)\s*=\s*([^\s]*)\s*$/,
       :method => :update,
-      :documentation => [["update id field = value", "Update the field with value in document id"]]
+      :documentation => [["update id field = value", "Update (or add) the field with value in document id"]]
     }
   end
   

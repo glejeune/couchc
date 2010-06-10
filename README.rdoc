@@ -9,15 +9,17 @@ couchc is a tiny console for CouchDB
 
 == Synopsis
 
-  $ couchc [http://localhost:5984/database]
+  $ couchc http://localhost:5984/database
   >> help
-  help                 : Display this help
-  quit                 : Quit
-  documents            : Show the document with id
-  _all_docs            : Same as documents
-  delete id            : Delete the document with id
-  show id              : Show the document with id
-  update id field = value : Update the field with value in document id
+  help                           : Display this help
+  quit                           : Quit
+  documents                      : Show the document with id
+  _all_docs                      : Same as documents
+  delete id [field]              : Delete the document with id or the field in the document
+  new_doc                        : Create a new document
+  show id                        : Show the document with id
+  update id field = value        : Update (or add) the field with value in document id
+  uri id                         : Returns the CouchDB uri for the document
   >>
 
 == Requirements
