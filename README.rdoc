@@ -1,6 +1,32 @@
 = couchc
 
-Description goes here.
+couchc is a tiny console for CouchDB
+
+== ChangeLog
+
+=== 0.1.0
+* First public release
+
+== Synopsis
+
+  $ couchc [http://localhost:5984/database]
+  >> help
+  help                 : Display this help
+  quit                 : Quit
+  documents            : Show the document with id
+  _all_docs            : Same as documents
+  delete id            : Delete the document with id
+  show id              : Show the document with id
+  update id field = value : Update the field with value in document id
+  >>
+
+== Requirements
+
+* couchrest
+
+== Install
+
+  sudo gem install couchc
 
 == Note on Patches/Pull Requests
  
